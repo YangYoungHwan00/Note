@@ -1,0 +1,247 @@
+1. gitbash --> user.name, user.email
+ git config --global
+
+2. 리눅스 커맨드 기초
+  - pwd, cd, ls . .. 리눅스 책
+3. vim (입력모드, 명령모드) :w :q :wq!
+
+4. 커밋 하나의 버전을 나타내는 깃의 기본 단위이다, 커밋은 '논리적 변경이 있을때' 만든다.
+
+커밋에 적절하게 메시지를 작 적어야함
+
+커밋메시지는 '구글 로그인 구현'
+
+애플로그인 관련 코드
+
+2. 저장소
+.git폴더의 유무에따라 저장소와 일반 폴더가 차이가 있다.
+클론(복제)
+
+TIL
+
+
+
+
+기능개발(feature, 휘쳐)
+
+Feat: 로그인 기능
+Fix: 상세페이지에 가격정보 오류 수정
+
+
+123
+로그인 기능 개발(#123)
+
+
+TIL(Today I Learned)
+
+
+it프로젝트는 적게는 수십개, 많게는 수백, 수천개가 모여서 만들어진다.
+
+불필요한 변경분이 커밋에 포함됩니다.
+
+STAGE
+
+ls -a
+ls -l
+
+
+- 코딩을 합니다(글을 추가한다)
+  - vscode에서 저장안한사람
+- 내가 최종 저장하기 원하는 파일만 staging 영역에 추가한다(git add)
+  - git add 안하고 커밋할려는 사람
+- git commit 명령어로 커밋을 만든다.
+
+
+로컬 머신에서 만든 저장소에 있는 모든 커밋들을,
+원격 저장소(깃헙)에 올리기
+
+9시 15분에 다시 시작 (git push origin main)
+
+
+git remote add origin 깃헙주소
+git branch -M main
+git push origin main
+
+1. 로컬 머신에 TIL 이라고 하는 저장소 만듬
+2. add, commit 명령어를 사용해서 2~6개 정도의 커밋을 만듬
+3. 깃헙에서 빈 저장소를 만듬
+4. 깃헙에서 가이드 해준대로 
+
+git init (master 브랜치가 생성됨)
+git branch -M main(브랜이름이 master에서 main으로 변경됨
+
+
+노션 싫어요!!
+
+인공지능 하는 엔지니어(대기업 취업)
+
+
+선형대수
+
+
+
+
+일반 사무직 직원
+
+
+
+리눅스 커맨드라인 기초
+cd, pwd, ls
+
+vim에디터 사용법
+파일열고, 코드(글)입력하고, 저장하고 나오기
+(입력모드, 명령모드)
+
+깃이 무엇인지
+
+깃, 코드가 담기는 공간인 저장소
+.git숨김폴더(git init)
+
+commit 
+깃을 구성하는 기본단위
+저장한다고 표현하지 x 커밋한다 라고 표현한다
+언제 커밋을 만드나? 논리적 변경이 있을때 만든다
+
+staging area
+
+
+
+
+
+master(main) 브랜치에서 작업을 함(커밋 만들기)
+
+몸통 역할을 하는 기둥 브랜치를 main, master
+
+저장소를 가면 main혹은 master브랜치가 하나씩은 꼭 있다
+
+master브랜치를 만들고 또 main브랜치를 만든다
+
+
+1. (회의, 버그리포트) 내가 할일을 정함
+2. 내가 할 일에 대한걸 '이슈'라는걸 만들어서 공유
+3. 이슈에 해당하는 '브랜치'를 만들어서 
+여기서 코딩을함
+4. 3에서 만든 브랜치에 '커밋'을 만듬
+5. 해당 브랜치를 PUSH
+6. Pull Request(Merge Request)를 만들
+7.(리뷰 과정)
+8. 내가 만든 브랜치가 main(master)브랜치에 머지 됨
+
+
+git commit -m "가나다라마바사"
+git commit --message "가나다라마바사"
+
+커밋에는 항상 커밋을 설명하는 메시지가 붙는다
+
+
+1. git commit하고 엔터침
+2. vim 에디터가 뜸
+3. 입력모드로 전환해서 적절한 커밋 메시지를 입력한다.
+
+==========
+FEAT.커밋메시지
+FIX.
+
+- 부가설명 1
+- 부가설명 2
+- 부가설명 3
+==========
+
+8시 10분까지 깃헙에 빈 저장소 하나 만들기
+
+입력모드에서 명령모드로 전환하는법
+(키보드에서 ESC누른다.)
+그리고 원하는 명령어 입력한다
+(예시1: 저장하고싶으면 :w)
+(예시2: 나오고 싶으면 :q)
+(예시3: 저장하고 나오고 싶으면 :wq)
+
+git add README.md
+git commit -m "initial commit"
+
+
+
+
+git remote add origin https://github.com/Violet-Bora-Lee/git-advanced.git
+git branch -M main
+git push -u origin main
+
+
+git branch 브랜치이름
+git branch 1-branch-explanation
+
+[작업 브랜치 전환(switch)할 때 쓰는 명령어]
+git checkout 1-branch-explanation
+git switch 1-branch-explanation
+두 명령어의 차이는 checkout 옛날 명령어, switch 요즘 명령어
+
+
+커밋 이력, 커밋 로그
+
+
+커밋을 삭제할때는 git reset HEAD~2
+
+
+git reset
+git push -f
+
+
+
+브랜치 병합
+
+20분까지 브랜치 병합 실습해볼수있는 
+새로운 저장소, 로컬 머신에 하나 만들기
+저장소 이름은 branch-merge-practice
+
+git commit -m "커밋메시지"
+
+
+
+
+a브랜치에 있는 커밋들을 master브랜치에도 반영하려면
+a브랜치를 master브랜치로 병합(merge) 해줘야 한다.
+
+
+
+브랜치를 병합하려고 할때
+1. 정상적으로 병합이 되는겨우
+2. 그렇지 않은 경우(충돌(CONFLICT))
+
+B브랜치를 MASTER에 병합하려고 할때 충돌이 났다.
+
+
+=====MASTER
+# 브랜치 병합 실습
+
+## 브랜치 병합이란
+- a브랜치와 b브랜치에서 했던 작업(커밋 이력)을 합칠 때 쓴다.
+===========
+
+
+=====B
+# 브랜치 병합 실습
+
+## 브랜치 병합 명령어
+- `a`브랜치를 `b`브랜치로 병합하려는 경우
+1. `b`브랜치를 체크아웃한다(`git checkout` 혹은 `switch` 명령어 씀)
+2. `git merge a` 명령어를 입력한다. 
+===========
+
+B브랜치를 maste에 병합
+
+
+
+=====MASTER
+# 브랜치 병합 실습
+
+## 브랜치 병합이란
+- a브랜치와 b브랜치에서 했던 작업(커밋 이력)을 합칠 때 쓴다.
+
+## 브랜치 병합 명령어
+- `a`브랜치를 `b`브랜치로 병합하려는 경우
+1. `b`브랜치를 체크아웃한다(`git checkout` 혹은 `switch` 명령어 씀)
+2. `git merge a` 명령어를 입력한다. 
+===========
+
+
+HEAD: 현재 체크아웃하고 있는 브랜치의 가장 최신 커밋을 가리키는 포인터
