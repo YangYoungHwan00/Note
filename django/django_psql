@@ -1,0 +1,27 @@
+django, postgresql 연동 세팅
+
+django설치
+postgresql설치
+
+---postgresql 실행 후---------------------------------------
+create database {db_name};
+create user {user id} with password {pw};
+alter role {user id} set client_encoding to 'utf-8';
+alter role {user id} set default_transaction_isolation to 'read committed';
+alter role {user id} set time zone 'Asia/Seoul';
+
+grant all privileges on database {db_name} to {user_id};
+---------------------------------------------------------------
+
+django\mysite\settings.py 수정
+
+DATABASES = {
+		'default' : {
+			'ENGINE' : 'django.db.backends.postgresql',
+			'NAME' : '생성한 db 이름',
+			'USER' : '생성한 유저 이름',
+			'PASSWORD' : '생성한 패스워드 값',
+			'HOST' : 'localhost',
+			'PORT' : '',
+		}
+	}
