@@ -1,0 +1,64 @@
+접속하기
+mysql -h서버 -u아이디 -p비밀번호 데이터베이스명
+(로컬호스트일 경우 -h옵션 생략 가능)
+(-p뒤에 비밀번호 없을 경우 비밀번호 입력 프롬프트 생성)
+
+
+데이터베이스 생성
+create database db명 character set utf8 collate utf8_general_ci;
+(utf8_genral_ci는 대소문자 구분없음, 구분할 때는 utf8_bin)
+
+
+데이터베이스 삭제
+drop database db명;
+
+
+사용자 추가
+create user '유저명'@'localhost' identified by '비밀번호';
+(localhost에서 접속할 수 있는 사용자)
+
+
+권한부여
+grant all privileges on *.* to '유저명'@'localhost' with grant option;
+(*.*은 모든db의 모든 테이블대한 권한을 부여)
+(with grant option은 다른 사용자에게 자신이 가진 권한을 주거나 회수 가능)
+
+grant all privileges on db명.* to '유저명'@'localhost';
+(db명 db의 권한만 부여)
+
+create user '유저명'@'%' identified by '비밀번호';
+(로컬호스트를 제외한 모든 주소에서 접속 가능)
+
+
+권한제거
+revoke all privileges *.* from '유저명'@'localhost';
+(권한만 삭제되고 사용자 정보는 남음)
+
+drop user '유저명'@'localhost';
+(완전히 삭제)
+
+
+데이터베이스 선택 및 쿼리 작업
+show databases;
+
+use db명;
+
+show tables;
+
+show tables like 'aa%';
+(테이블명이 aa로 시작하는 테이블만 보여줌)
+
+show create database db명;
+show create table 테이블명;
+(db,table 생성시 사용된 쿼리를 확인 가능)
+
+
+프로세스 확인하기
+show processlist;
+kill 프로세스아이디
+
+
+관리자 비밀번호 분실시 비밀번호 변경 방법
+1.mysql 서버를 중지
+2.권한을 체크하지 않게하는 --skip-grant 옵션을 사용하여 서버를 시작
+3.mysql --skip-grant
