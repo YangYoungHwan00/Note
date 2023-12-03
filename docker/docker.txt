@@ -1,0 +1,11 @@
+docker container 생성
+docker run --restart unless-stopped --name 컨테이너명 -e ORACLE_PASSWORD=비밀번호 -p 1521:1521 -d 이미지명(ex:gvenzl/oracle-xe)
+
+
+컨테이너 실행
+docker exec -it 컨테이너명
+
+
+컨텍스트 변경
+docker context use 컨텍스트명
+

@@ -1,0 +1,2 @@
+colima 실행
+colima start --memory 4 --arch x86_64
