@@ -1,0 +1,11 @@
+api를 통해 데이터를 화면에 출력시 데이터를 저장한 변수가 null이거나 없을 경우 발생.
+
+해결-> 변수명&& ~ 로 변수에 값이 있을 경우에만 출력하도록 조건추가
+
+ex)
+const [ex, setEx] = useState(null);
+~
+<div>{ ex&&ex.map(data => (
+			{data.id}
+		))}
+</div>
